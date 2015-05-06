@@ -1,17 +1,18 @@
 {%set build = 0 %}
+{%set version = '2013.5.7' %}
 
 package:
   name: pytools
-  version: !!str 2013.5.7
+  version: {{version}}
 
 about:
-  home: https://github.com/jab/bidict
+  home: http://pypi.python.org/pypi/pytools
   license: MIT License
   summary: "A collection of tools for Python."
 
 source:
-  fn: pytools-2013.5.7.tar.gz
-  url: https://pypi.python.org/packages/source/p/pytools/pytools-2013.5.7.tar.gz
+  fn: pytools-{{version}}.tar.gz
+  url: https://pypi.python.org/packages/source/p/pytools/pytools-{{version}}.tar.gz
   md5: 8954a655749d646d456335b93aad3caf
 
 requirements:
@@ -21,6 +22,7 @@ requirements:
     - setuptools
 
   run:
+    - 'decorator >=3.2.0'
     - python
 
 build:
